@@ -5,4 +5,4 @@ Created a python script for analyzing election results.
 A set of poll data called [election_data.csv](election_results/Resources/election_data.csv), which is composed of three columns: `Voter ID`, `County`, and `Candidate`. 
 
 ## Steps Taken
-* Calculated the total number of votes cast.
+* Calculated the total number of votes cast by adding each Voter ID to a list and finding the length of the list.
