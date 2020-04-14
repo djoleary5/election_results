@@ -6,3 +6,4 @@ A set of poll data called [election_data.csv](election_results/Resources/electio
 
 ## Steps Taken
 * Calculated the total number of votes cast by adding each Voter ID to a list and finding the length of the list.
+* Created a list of candidates that recieved votes by adding the candidate for each vote to a list and finding the unique elements of the list.
