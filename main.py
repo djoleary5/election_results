@@ -46,9 +46,18 @@ while i < (len(candidates)):
     voteCounts.append(voteCnt)
     i = i + 1
 
-
 # print output in terminal
 print("Election Results")
 print("-------------------------")
 print("Total Votes: " + str(len(voterIDs)))
+print("-------------------------")
+# loop and print results for each canditate and stores the index of the highest vote count
+while j < (len(candidates)):
+    if voteCounts[j] > win:
+        win = voteCounts[j]
+        winCand = j
+    pct = ((voteCounts[j])/(sum(voteCounts)))*100
+    pct = round(pct, 2)
+    print(candidates[j] + ": " + str(pct) + "%  (" + str(voteCounts[j]) + ")")
+    j = j + 1
 print("-------------------------")
