@@ -61,6 +61,6 @@ while j < (len(candidates)):
     print(candidates[j] + ": " + str(pct) + "%  (" + str(voteCounts[j]) + ")")
     j = j + 1
 print("-------------------------")
-# uses the index of the highest vote count to return the name of the winning candidate
+# use the index of the highest vote count to return the name of the winning candidate
 print("Winner:  " + candidates[winCand])
 print("-------------------------")
