@@ -64,3 +64,19 @@ print("-------------------------")
 # use the index of the highest vote count to return the name of the winning candidate
 print("Winner:  " + candidates[winCand])
 print("-------------------------")
+
+# create output text file and write output into the file
+output_file = os.path.join("output.txt")
+writer = open(output_file, 'w+') 
+writer.write("Election Results\n")
+writer.write("-------------------------\n")
+writer.write("Total Votes: " + str(len(voterIDs)) + "\n")
+writer.write("-------------------------\n")
+while k < (len(candidates)):
+    pct = ((voteCounts[k])/(sum(voteCounts)))*100
+    pct = round(pct, 2)
+    writer.write(candidates[k] + ": " + str(pct) + "%  (" + str(voteCounts[k]) + ")\n")
+    k = k + 1
+writer.write("-------------------------\n")
+writer.write("Winner:  " + candidates[winCand] + "\n")
+writer.write("-------------------------\n")
