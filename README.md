@@ -23,3 +23,4 @@ A set of poll data called [election_data.csv](election_results/Resources/electio
   Winner: Khan
   -------------------------
   ```
+* Created a text file [output.txt](output.txt) and wrote the output into the file. 
