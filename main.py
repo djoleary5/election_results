@@ -31,6 +31,22 @@ with open(csvpath, newline= "") as csvfile:
 # remove duplicates from candidate list
 candidates = list( dict.fromkeys(candidates))
 
+#loop through candidates list 
+while i < (len(candidates)):
+    # open input file, remove header row and loops through the remaining rows
+    with open(csvpath, newline= "") as csvfile:
+        csvreader = csv.reader(csvfile, delimiter=",")
+        header = next(csvreader)
+        voteCnt = 0
+        for row in csvreader:
+            # count the number of votes for each candidate
+            if candidates[i] == row[2]:
+                voteCnt = voteCnt + 1
+    # add vote count for each cadidate to list            
+    voteCounts.append(voteCnt)
+    i = i + 1
+
+
 # print output in terminal
 print("Election Results")
 print("-------------------------")
